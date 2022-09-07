@@ -1,0 +1,10 @@
+body{
+    background-color: blueviolet;
+    color: coral;
+}
+.jumbotron {
+    background-image: url("viruses-bacteria-fungi-s.jpeg");
+    background-size: 100% 100%;
+    text-align: center;
+  }
+  

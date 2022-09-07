@@ -1,25 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Greek gods</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-</head>
-<body>
-    <div class="jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <h3>Use the interactive charts below to explore the dataset</h3>
-    </div>
-    <div id="plot"></div>
-    <!- <script src="data.js"></script> -->
-    <!-- <script src="plots.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
-    <!-<script src = "samples.json"></script> -->
-     <!-- <script src = "charts.js"></script> 
-</body>
-</html> --> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href = "style.css"> 
 </head>
 
 <body>
@@ -38,8 +17,14 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
         <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+        <p style="font-size:30px">Use the interactive charts below to explore the dataset</p>
       </div>
+
+      <div class="paragraph">
+        <h2 style="font-size:30px"> This is a website displaying the top ten bacterial species in each test subjects navels. We then observe 
+          how the bacteria in each person is found in Improbabile Beef.
+        </h2>
+      </div> 
     </div>
     <div class="row">
       <div class="col-md-2">
@@ -56,29 +41,32 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div id="bar"></div>
+        
+        <div id="bar" style="width:100%" ></div>
+        <h3>The horizontal bar chart shown above gives an overview of different types of bacteria and their respective population counts.</h3>
+    
       </div>
       <div class="col-md-5">
-        <div id="gauge"></div>
+        <div id="gauge" style="width:10px" ></div>
+        <div class="paragraph"></div>
+          <h3>This gauge describes the washing frequency of each test subjects navel.</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div id="bubble"></div>
+        
+        <div id="bubble" style="width:100%"></div>
+        <h3>The bubble chart is an exaggerated view of the population count for various bacteria.</h3>
       </div>
     </div>
   </div>
-<div id = "plot"></div>
+<div id = "bar">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src = "charts.js"></script>
 
-<div id = plot2></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<script src = "bubble_chart.js"></script>
-
+</div>
 
 </body>
 

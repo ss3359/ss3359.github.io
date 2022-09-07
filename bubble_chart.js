@@ -1,6 +1,7 @@
 // Bar and Bubble charts
 // Create the buildCharts function.
 function buildCharts(sample) {
+
   // Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
     var metadata = data.metadata; 
@@ -29,6 +30,10 @@ function buildCharts(sample) {
       text: outside_labels, 
       mode : "markers",
       marker: {
+        size : values, 
+        color: outside_ids, 
+        colorscale: "Earth",
+
         size : size
       }
      }];
@@ -36,6 +41,12 @@ function buildCharts(sample) {
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title : "Bacteria Cultures Per Sample", 
+      margin : {t : 0}, 
+      hovermode : "closest", 
+      xaxis : {title: "OTU ID"}, 
+      margin: {t:30},
+      
+
       showlegend : false, 
       height : 800, 
       width : 800, 
@@ -45,6 +56,11 @@ function buildCharts(sample) {
     };
 
     // 3. Use Plotly to plot the data with the layout.
+
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
+
+
+    
     Plotly.newPlot("plot2", bubbleData, bubbleLayout); 
   });
 }
